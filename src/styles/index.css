@@ -1,0 +1,75 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global alignment and spacing */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  margin: 0 auto;
+}
+
+/* Remove gradient overlay from team cards */
+div[class*="h-\[415px\]"]::before {
+  display: none !important;
+}
+
+/* Ensure navbar is properly aligned */
+nav {
+  left: 0 !important;
+  right: 0 !important;
+  margin: 0 !important;
+}
+
+/* Linear gradient beam animations */
+@keyframes beamFlow {
+  0%, 100% {
+    opacity: 0.95;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes originPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+}
+
+@keyframes tealAccent {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* Gradient animation classes */
+.gradient-beam-flow {
+  animation: beamFlow 8s ease-in-out infinite;
+}
+
+.gradient-origin-pulse {
+  animation: originPulse 6s ease-in-out infinite;
+}
+
+.gradient-teal-accent {
+  animation: tealAccent 10s ease-in-out infinite;
+}
