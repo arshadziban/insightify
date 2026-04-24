@@ -54,3 +54,5 @@ coverage/
 
 # Misc
 *.local
+# Excluded files
+src/LandingPage/LandingPage.tsx
